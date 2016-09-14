@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{11BCDF02-C230-4634-830B-7DF7500A5CBD}</ProjectGuid>
+    <ProjectGuid>{653E644B-3660-4838-88A9-4E6A32B61004}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>lab2</RootNamespace>
+    <RootNamespace>VasilyukLab2</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -141,25 +141,21 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="child.h" />
-    <ClInclude Include="parent.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Vasilyuk_child.h" />
+    <ClInclude Include="Vasilyuk_parent.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="child.cpp" />
-    <ClCompile Include="lab2.cpp" />
-    <ClCompile Include="parent.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="lab2.rc" />
+    <ClCompile Include="VasilyukLab2.cpp" />
+    <ClCompile Include="Vasilyuk_child.cpp" />
+    <ClCompile Include="Vasilyuk_parent.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

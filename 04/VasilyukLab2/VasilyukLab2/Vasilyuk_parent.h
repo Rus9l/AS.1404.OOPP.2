@@ -1,10 +1,10 @@
 #pragma once
-
-class parent
+class Vasilyuk_parent
 {
 public:
-	parent();
-	~parent();
+	Vasilyuk_parent();
+	~Vasilyuk_parent();
+
 
 	void simp();
 	virtual void virt();
