@@ -1,0 +1,81 @@
+// ConsoleApplication11.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include "iostream"
+
+using namespace std;
+
+class Kulikov_First // базовый
+{
+public:
+	virtual void f1()
+	{
+		cout << "Вирт первая" << endl;
+	}
+	void f2()
+	{
+		cout << "простая первая" << endl;
+	}
+
+};
+
+
+
+class Kulikov_Second : public Kulikov_First // дочерний
+{
+public:
+	virtual void f1()
+	{
+		cout << "Вирт дочка" << endl;
+	}
+	void f2()
+	{
+		cout << "Простая дочка" << endl;
+	}
+
+};
+
+
+
+
+int main()
+{
+	setlocale(ALL,"Russian")
+
+	Kulikov_First *ptr1;
+	Kulikov_First A_obj;
+
+	ptr1 = &A_obj;
+
+	Kulikov_Second *ptr2;
+	Kulikov_Second B_obj;
+
+	ptr2 = &B_obj;
+
+	Kulikov_First *ptr3;
+
+	ptr3 = ptr2;
+
+	Kulikov_Second *ptr4;
+
+	ptr4 = static_cast <Kulikov_Second*>(ptr3);
+
+	ptr1->f1();
+	ptr1->f2();
+	cout << endl;
+	ptr2->f1();
+	ptr2->f2();
+	cout << endl;
+	ptr3->f1();
+	ptr3->f2();
+	cout << endl;
+	ptr4->f1();
+	ptr4->f2();
+
+	system("pause");
+
+	return 0;
+}
+
+
+
